@@ -1,0 +1,48 @@
+:root {
+  --md-primary-fg-color: #8B00FF;
+  --md-primary-fg-color--light: #9D4EDD;
+  --md-primary-fg-color--dark: #7B2CBF;
+  --md-accent-fg-color: #C77DFF;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #8B00FF;
+  --md-typeset-a-color: #7B2CBF;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #9D4EDD;
+  --md-typeset-a-color: #C77DFF;
+}
+
+/* Neon violet header effects */
+.md-header {
+  background: linear-gradient(135deg, #8B00FF 0%, #6A0DAD 100%);
+  box-shadow: 0 0 10px rgba(139, 0, 255, 0.5);
+}
+
+.md-tabs {
+  background: linear-gradient(135deg, #7B2CBF 0%, #5A189A 100%);
+}
+
+/* Neon glow effect on hover */
+.md-nav__link:focus, .md-nav__link:hover {
+  color: #E0AAFF;
+  text-shadow: 0 0 8px rgba(224, 170, 255, 0.8);
+}
+
+/* Footer styling */
+.md-footer {
+  background: linear-gradient(135deg, #3C096C 0%, #240046 100%);
+  color: white;
+}
+
+.md-footer-meta {
+  background: linear-gradient(135deg, #240046 0%, #10002B 100%);
+}
+
+/* Custom logo size */
+.md-header-nav__button.md-logo img {
+  width: 120px;
+  height: auto;
+}
