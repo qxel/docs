@@ -3,8 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 permissions:
   contents: read
@@ -12,21 +10,21 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: '3.x'
       - run: pip install mkdocs-material
       - run: mkdocs build --site-dir site
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
-  deploy-to-pages:
-    needs: deploy
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
