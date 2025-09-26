@@ -24,20 +24,21 @@ theme:
   name: material
   logo: https://cdn.jsdelivr.net/gh/mr-izu/Images@main/qxel.svg
   favicon: https://cdn.jsdelivr.net/gh/mr-izu/Images@main/qxel.svg
-  palette:
-    - scheme: default
-      primary: black
-      accent: gray
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: black
-      accent: gray
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 
+  palette:
+  - scheme: default
+    primary: indigo
+    accent: blue
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    primary: indigo
+    accent: blue
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+      
   features:
     - navigation.tabs
     - navigation.sections
