@@ -25,17 +25,15 @@ theme:
   logo: https://cdn.jsdelivr.net/gh/mr-izu/Images@main/qxel.svg
   favicon: https://cdn.jsdelivr.net/gh/mr-izu/Images@main/qxel.svg
   palette:
-    # Light mode
     - scheme: default
-      primary: black
-      accent: teal
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Dark mode
     - scheme: slate
-      primary: white
-      accent: teal
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
