@@ -26,14 +26,14 @@ theme:
   favicon: https://cdn.jsdelivr.net/gh/mr-izu/Images@main/qxel.svg
   palette:
     - scheme: default
-      primary: deep purple
-      accent: deep purple
+      primary: black
+      accent: gray
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: deep purple
-      accent: deep purple
+      primary: black
+      accent: gray
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
