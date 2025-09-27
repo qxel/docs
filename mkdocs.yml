@@ -11,6 +11,10 @@ nav:
     - Overview: business/index.md
     - Introduction: business/introduction.md
     - Get Started: business/get-started.md
+    - Registration: business/registration.md
+    - Data Entry: business/data_entry.md
+    - Seo integration: business/seo_integration.md
+    - Add Products: business/add_products.md
   - Users:
     - Overview: users/index.md
     - Introduction: users/introduction.md
@@ -55,7 +59,7 @@ extra:
       link: https://github.com/your-username
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/your-handle
-
+      
 markdown_extensions:
   - toc:
       permalink: true
