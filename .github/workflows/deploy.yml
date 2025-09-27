@@ -32,6 +32,38 @@ jobs:
       - name: Build site
         run: mkdocs build --site-dir _site
         
+      - name: Create redirects for Vercel proxy
+        run: |
+          # Create a Python script to generate redirects
+          cat > create_redirects.py << 'EOF'
+          import os
+          
+          redirects = {
+              'business': 'https://qxel.app/docs/business/',
+              'users': 'https://qxel.app/docs/users/',
+              'partners': 'https://qxel.app/docs/partners/',
+              'docs': 'https://qxel.app/docs/'  # for /docs without trailing slash
+          }
+          
+          template = '''<!DOCTYPE html>
+          <html>
+          <head>
+              <meta http-equiv="refresh" content="0; url={destination}">
+              <script>window.location.href = '{destination}';</script>
+          </head>
+          <body>
+              <p>Redirecting to <a href="{destination}">{destination}</a></p>
+          </body>
+          </html>'''
+          
+          for filename, destination in redirects.items():
+              with open(f'_site/{filename}.html', 'w') as f:
+                  f.write(template.format(destination=destination))
+              print(f'Created redirect: {filename}.html -> {destination}')
+          EOF
+          
+          python create_redirects.py
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
